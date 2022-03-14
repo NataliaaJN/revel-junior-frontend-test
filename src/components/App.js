@@ -9,6 +9,8 @@ import Loader from "./Loader";
 const App = () => {
   const [photos, setPhotos] = useState([]);
   const [authorFilter, setAuthorFilter] = useState("");
+  const [limitNumberOfPhotos, setLimitNumberOfPhotos] = useState(3);
+
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -23,13 +25,22 @@ const App = () => {
       .catch((error) => setError(error.message));
   }, []);
 
+  // Limit photos
+  const setLimitOfPhotos = photos.slice(0, limitNumberOfPhotos);
+
+  // Load more photos
+  const showMorePhotos = (ev) => {
+    ev.preventDefault();
+    setLimitNumberOfPhotos((prevNumber) => prevNumber + 3);
+  };
+
   // Handle search input
   const handleFilter = (value) => {
     setAuthorFilter(value);
   };
 
   // Filter by author
-  const filteredPhotos = photos.filter((eachPhotoData) =>
+  const filteredPhotos = setLimitOfPhotos.filter((eachPhotoData) =>
     eachPhotoData.author
       .toLocaleLowerCase()
       .includes(authorFilter.toLocaleLowerCase())
@@ -43,6 +54,7 @@ const App = () => {
         {error && <p>{error} </p>}
         <Form authorFilter={authorFilter} handleFilter={handleFilter} />
         <PhotosList photos={photos} filteredPhotos={filteredPhotos} />
+        <button onClick={showMorePhotos}>Load more</button>
       </main>
     </div>
   );
