@@ -1,0 +1,35 @@
+.main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 0 86px 0;
+  
+  // padding: 70px 115px 74px 114px;
+  @media (min-width: 1024px) {
+    padding: 70px 0 74px 0;
+  }
+}
+.photosSection {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    width: 1211px;
+    height: 1077px;
+  }
+
+  &__photosListContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    // grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 55.02px 0px;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 31px 16px;
+    }
+  }
+}
