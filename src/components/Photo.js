@@ -7,7 +7,7 @@ const Photo = ({ eachPhoto, index }) => {
 
   const renderAuthor = () => {
     // eslint-disable-next-line no-restricted-globals
-    if (screen.width > 1024) return <p>{eachPhoto.author}</p>;
+    if (screen.width >= 1024) return <p className="photoElement__hoverAuthorContainer--author">{eachPhoto.author}</p>;
   };
 
   const getIndexNumber = () => {
@@ -27,6 +27,7 @@ const Photo = ({ eachPhoto, index }) => {
   };
   return (
     <li className="photoElement">
+      
       <div className="photoElement__photoContainer" onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}>
         <div className="photoElement__photoContainer--indexContainer">
@@ -38,8 +39,8 @@ const Photo = ({ eachPhoto, index }) => {
           alt={eachPhoto}
         />
       </div>
-      
-      {isShown && <div> {renderAuthor()}</div>}
+      <p className="photoElement__authorName">{eachPhoto.author}</p>
+      {isShown && <div className="photoElement__hoverAuthorContainer">{renderAuthor()}</div>}
     </li>
   );
 };
