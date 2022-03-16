@@ -1,41 +1,44 @@
 @import "../core/variables";
-// .hidden{
-//   display: none;
-// }
+@import "../core/mixins";
+@import "../core/animations";
+
 .photoElement {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  @include center-items;
+  -webkit-animation: slide-in 3s 1.25s both;
+  animation: slide-in 3s 1.25s both;
+  @include desktop {
+    -webkit-animation: fade-in 3s 1.25s both;
+    animation: fade-in 3s 1.25s both;
+  }
 
   &__photoContainer {
     position: relative;
     width: 366px;
     height: 281.98px;
-    border: 1px solid #eeeeee;
+    outline: 1px solid $lightGray2;
 
-    @media (min-width: 1024px) {
+    @include desktop {
       width: 384px;
       height: 336px;
-      overflow: hidden;
       transition: all 0.5s ease;
       &:hover {
-        filter: grayscale(100%);
+        transform: translate(-5px);
       }
     }
 
     &--indexContainer {
       position: absolute;
-      // z-index: 3;
+      z-index: 3;
       top: 15.72px;
       right: 15.13px;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center-items;
       width: 69.04px;
       height: 44.21px;
-      background: rgba(17, 17, 17, 0.8);
+      background-color: $indexBackground;
       border-radius: 100px;
       color: $fontColor;
 
@@ -48,7 +51,7 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
-      @media (min-width: 1024px) {
+      @include desktop {
         transition: all 0.5s ease;
         &:hover {
           transform: scale(1.25, 1.25);
@@ -58,21 +61,19 @@
   }
 
   &__authorName {
-    @media (min-width: 1024px) {
+    @include desktop {
       display: none;
     }
   }
   &__hoverAuthorContainer {
-    @media (min-width: 1024px) {
+    @include desktop {
       position: absolute;
       z-index: 1;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      @include center-items;
       width: 100%;
       height: 40px;
       background-color: rgba(0, 0, 0, 0.561);
-      
     }
     &--author {
       position: relative;
@@ -80,7 +81,6 @@
       color: $fontColor;
       text-transform: uppercase;
       letter-spacing: 2px;
-      
     }
   }
 }

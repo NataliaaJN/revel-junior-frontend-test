@@ -1,33 +1,30 @@
+@import "../core/mixins";
+@import "../core/variables";
+
 .main {
   display: grid;
-  justify-content: center;
-  align-items: center;
+  @include center-items;
   padding: 22px 0 86px 0;
   
-  // padding: 70px 115px 74px 114px;
-  @media (min-width: 1024px) {
+   @include desktop {
     padding: 70px 0 74px 0;
   }
 }
 .photosSection {
   display: grid;
-  justify-content: center;
-  align-items: center;
+  @include center-items;
 
-  @media (min-width: 1024px) {
+   @include desktop {
     width: 1211px;
-    
   }
 
   &__photosListContainer {
     display: grid;
-    justify-content: center;
-    align-items: center;
-    // grid-auto-rows: 1fr;
+    @include center-items;
     grid-template-columns: 1fr;
     gap: 55.02px 0px;
 
-    @media (min-width: 1024px) {
+     @include desktop {
       grid-template-columns: repeat(3, 1fr);
       gap: 31px 16px;
     }
