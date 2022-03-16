@@ -1,11 +1,16 @@
+import useScroll from "../hooks/useScroll";
 import "../styles/components/Header.scss";
 
-import React from "react";
-
 const Header = () => {
+  const scrollInfo = useScroll();
+
+  const isHeaderScrolled = () => {
+    return scrollInfo.y >= 10;
+  };
+
   return (
-    <header className="header">
-      <h1 className="header__title">Cool pics</h1>
+    <header className={ isHeaderScrolled() ? "main-header--scrolled " : "header"}>
+      <h1 className={isHeaderScrolled() ? "main-header--scrolled__title " : "header__title"}>Cool pics</h1>
     </header>
   );
 };
