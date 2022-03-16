@@ -3,11 +3,29 @@ $robotoFont: "Roboto", sans-serif;
 $mainFont: $robotoFont;
 
 // Colors
-$grey: #637878;
-$headerColor: $grey;
 $white: #ffffff;
-$fontColor: $white;
 $lightGray1: #e5e5e5;
-$backgroundColor: $lightGray1;
 $lightGray2: #EEEEEE;
+$grey: #637878;
+$darkGrey: rgba(17, 17, 17, 0.8);
+$black: black;
+$red: rgb(224, 86, 86);
+$lightBlue: rgb(171, 208, 233);
+$aqua: aqua;
+$darkBlue: rgb(57, 57, 87);
+
+// Main page colors
+$headerColor: $grey;
+$fontColor: $white;
+$backgroundColor: $lightGray1;
 $borderColor: $lightGray2;
+$indexBackground: $darkGrey;
+
+// Not found page colors
+$error404Color: $aqua;
+$notFoundMainColor: $lightBlue;
+$notFoundBackgroundColor: $darkBlue;
+
+// Error message
+$errorMessagebkColor: $red;
+$errorMessageBorderColor: $white;

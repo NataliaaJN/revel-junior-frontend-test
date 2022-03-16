@@ -1,0 +1,75 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.pageNotFound {
+  display: flex;
+  flex-direction: column;
+  @include center-items;
+  height: 100vh;
+  font-family: $mainFont;
+  background-color: $notFoundBackgroundColor;
+  color: $fontColor;
+  padding: 35px;
+
+  &__404 {
+    letter-spacing: 4px;
+    color: $error404Color;
+    margin-bottom: 30px;
+    @include desktop {
+      font-size: 60px;
+      margin-bottom: 50px;
+    }
+  }
+  &__message {
+    width: 100%;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    text-align: justify;
+    @include desktop {
+      width: 40%;
+      text-align: center;
+    }
+  }
+
+  &__imgContainer {
+    width: 200px;
+    margin: 40px 0;
+    @include desktop {
+      width: 400px;
+    }
+
+    &--gif {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__linkHome {
+    display: flex;
+    @include center-items;
+    height: 35px;
+    width: 120px;
+    border-radius: 20px;
+    border: 1px solid $notFoundMainColor;
+    color: $notFoundMainColor;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: $notFoundMainColor;
+      color: $black;
+    }
+
+    @include desktop {
+      width: 200px;
+      height: 40px;
+      font-size: 20px;
+      letter-spacing: 3px;
+      margin: 20px 0;
+    }
+  }
+}

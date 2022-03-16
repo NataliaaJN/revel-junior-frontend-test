@@ -1,0 +1,51 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.errorMessageContainer {
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  display: flex;
+  @include center-items;
+  width: 80%;
+  height: 20vh;
+  background-color: $errorMessagebkColor;
+  color: $fontColor;
+  border: 5px solid $errorMessageBorderColor;
+  outline: 11px solid $errorMessagebkColor;
+  @include desktop {
+    top: 20%;
+    left: 30vw;
+    width: 40vw;
+    height: 20vh;
+  }
+
+  &__exclamation {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    @include desktop {
+      top: 10px;
+      right: 30px;
+      font-size: 40px;
+    }
+  }
+
+  &__message {
+    font-family: $mainFont;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: 35px;
+    }
+
+    &--icon {
+      margin-left: 10px;
+      @include desktop {
+        margin-left: 20px;
+      }
+    }
+  }
+}

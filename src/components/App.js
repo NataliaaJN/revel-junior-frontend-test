@@ -6,6 +6,8 @@ import "../styles/App.scss";
 import Header from "./Header";
 import Form from "./Form";
 import Loader from "./Loader";
+import ErrorMessage from "./ErrorMessage";
+import PageNotFound from "./PageNotFound";
 
 const App = () => {
   //    STATES     //
@@ -14,7 +16,7 @@ const App = () => {
   const [limitNumberOfPhotos, setLimitNumberOfPhotos] = useState(3);
 
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   //    EFFECTS     //
   // Take api data
@@ -25,7 +27,7 @@ const App = () => {
         setPhotos(data);
         setIsLoading(false);
       })
-      .catch((error) => setError(error.message));
+      .catch((error) => setErrorMessage(error.message));
   }, []);
 
   //    FUNCTIONS    //
@@ -60,7 +62,7 @@ const App = () => {
               <Header />
               <main className="main">
                 <Loader isLoading={isLoading} />
-                {error && <p>{error} </p>}
+                {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
                 <Form authorFilter={authorFilter} handleFilter={handleFilter} />
                 <PhotosList photos={photos} filteredPhotos={filteredPhotos} />
                 <button onClick={showMorePhotos}>Load more</button>
@@ -68,6 +70,8 @@ const App = () => {
             </>
           }
         />
+
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
