@@ -1,27 +1,72 @@
 @import "../core/variables";
-.header {
+@import "../core/mixins";
+@import "../core/animations";
+
+.main-header--scrolled {
+  position: fixed;
+  z-index: 3;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-items;
+  width: 100%;
+  height: 48px;
   background-color: $headerColor;
   color: $fontColor;
-  height: 64px;
-  // margin-bottom: 22px;
-  @media (min-width: 1024px) {
+  -webkit-animation: resizeHeaderMobile 0.6s ease;
+  animation: resizeHeaderMobile 0.6s ease;
+  @include desktop {
     justify-content: flex-start;
-    width: 100%;
-    height: 104px;
+    height: 72px;
+    -webkit-animation: resizeHeader 0.6s ease;
+    animation: resizeHeader 0.6s ease;
   }
 
   &__title {
     word-spacing: -10px;
     text-transform: capitalize;
-    font: normal 400 32px/38px $mainFont;
+    font: normal 400 24px/28.13px $mainFont;
+    -webkit-animation: resizeTitleMobile 0.6s ease;
+    animation: resizeTitleMobile 0.6s ease;
 
-    @media (min-width: 1024px) {
+    @include desktop {
+      font-size: 32px;
+      line-height: 37.5px;
       margin-left: 32px;
+      -webkit-animation: resizeTitle 0.6s ease;
+      animation: resizeTitle 0.6s ease;
+    }
+  }
+}
+
+
+.header {
+  display: flex;
+  @include center-items;
+  height: 64px;
+  background-color: $headerColor;
+  color: $fontColor;
+  -webkit-animation: toOriginalHeaderSizeMobil 0.6s ease;
+  animation: toOriginalHeaderSizeMobil 0.6s ease;
+
+  @include desktop {
+    justify-content: flex-start;
+    width: 100%;
+    height: 104px;
+    -webkit-animation: toOriginalHeaderSize 0.6s ease;
+    animation: toOriginalHeaderSize 0.6s ease;
+  }
+
+  &__title {
+    font: normal 400 32px/38px $mainFont;
+    word-spacing: -10px;
+    text-transform: capitalize;
+    -webkit-animation: focus-in-expand 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: focus-in-expand 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @include desktop {
       font-size: 48px;
       line-height: 56.25px;
+      margin-left: 32px;
     }
   }
 }

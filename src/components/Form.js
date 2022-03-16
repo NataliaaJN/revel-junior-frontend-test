@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "../styles/components/Form.scss";
 
 const Form = ({ authorFilter, handleFilter }) => {
@@ -15,6 +16,11 @@ const Form = ({ authorFilter, handleFilter }) => {
       />
     </form>
   );
+};
+
+Form.propTypes = {
+  authorFilter: PropTypes.string.isRequired,
+  handleFilter: PropTypes.func.isRequired,
 };
 
 export default Form;

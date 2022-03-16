@@ -9,8 +9,16 @@ const Header = () => {
   };
 
   return (
-    <header className={ isHeaderScrolled() ? "main-header--scrolled " : "header"}>
-      <h1 className={isHeaderScrolled() ? "main-header--scrolled__title " : "header__title"}>Cool pics</h1>
+    <header
+      className={isHeaderScrolled() ? "main-header--scrolled " : "header"}
+    >
+      <h1
+        className={
+          isHeaderScrolled() ? "main-header--scrolled__title " : "header__title"
+        }
+      >
+        Cool pics
+      </h1>
     </header>
   );
 };
