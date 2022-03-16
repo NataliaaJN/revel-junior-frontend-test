@@ -2,5 +2,7 @@
 @import "./core/variables";
 
 .App{
-    background-color: $backgroundColor;
+    height: 100vh;
+    // background-color: $backgroundColor;
+    background-color: rgb(26, 25, 25);
 }

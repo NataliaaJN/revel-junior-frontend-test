@@ -18,10 +18,16 @@
     @media (min-width: 1024px) {
       width: 384px;
       height: 336px;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      &:hover {
+        filter: grayscale(100%);
+      }
     }
 
     &--indexContainer {
       position: absolute;
+      // z-index: 3;
       top: 15.72px;
       right: 15.13px;
       display: flex;
@@ -42,6 +48,12 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      @media (min-width: 1024px) {
+        transition: all 0.5s ease;
+        &:hover {
+          transform: scale(1.25, 1.25);
+        }
+      }
     }
   }
 
@@ -59,8 +71,7 @@
       justify-content: center;
       width: 100%;
       height: 40px;
-      
-        background-color: rgba(0, 0, 0, 0.561);
+      background-color: rgba(0, 0, 0, 0.561);
       
     }
     &--author {
@@ -69,6 +80,7 @@
       color: $fontColor;
       text-transform: uppercase;
       letter-spacing: 2px;
+      
     }
   }
 }

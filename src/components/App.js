@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import getApiData from "../services/api";
 import PhotosList from "./PhotosList";
 import "../styles/App.scss";
@@ -7,6 +8,7 @@ import Form from "./Form";
 import Loader from "./Loader";
 
 const App = () => {
+  //    STATES     //
   const [photos, setPhotos] = useState([]);
   const [authorFilter, setAuthorFilter] = useState("");
   const [limitNumberOfPhotos, setLimitNumberOfPhotos] = useState(3);
@@ -14,6 +16,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  //    EFFECTS     //
   // Take api data
   useEffect(() => {
     setIsLoading(true);
@@ -25,6 +28,7 @@ const App = () => {
       .catch((error) => setError(error.message));
   }, []);
 
+  //    FUNCTIONS    //
   // Limit photos
   const setLimitOfPhotos = photos.slice(0, limitNumberOfPhotos);
 
@@ -48,14 +52,23 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
-      <main className="main">
-        <Loader isLoading={isLoading} />
-        {error && <p>{error} </p>}
-        <Form authorFilter={authorFilter} handleFilter={handleFilter} />
-        <PhotosList photos={photos} filteredPhotos={filteredPhotos} />
-        <button onClick={showMorePhotos}>Load more</button>
-      </main>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <main className="main">
+                <Loader isLoading={isLoading} />
+                {error && <p>{error} </p>}
+                <Form authorFilter={authorFilter} handleFilter={handleFilter} />
+                <PhotosList photos={photos} filteredPhotos={filteredPhotos} />
+                <button onClick={showMorePhotos}>Load more</button>
+              </main>
+            </>
+          }
+        />
+      </Routes>
     </div>
   );
 };
