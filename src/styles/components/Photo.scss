@@ -5,8 +5,8 @@
 .photoElement {
   position: relative;
   display: flex;
-  flex-direction: column;
   @include center-items;
+  flex-direction: column;
   -webkit-animation: slide-in 3s 1.25s both;
   animation: slide-in 3s 1.25s both;
   @include desktop {
@@ -18,29 +18,29 @@
     position: relative;
     width: 366px;
     height: 281.98px;
-    outline: 1px solid $lightGray2;
+    border: 1px solid $lightGray2;
 
     @include desktop {
       width: 384px;
       height: 336px;
+      overflow: hidden;
       transition: all 0.5s ease;
       &:hover {
-        transform: translate(-5px);
+        filter: grayscale(100%);
       }
     }
 
     &--indexContainer {
       position: absolute;
-      z-index: 3;
       top: 15.72px;
       right: 15.13px;
       display: flex;
       @include center-items;
       width: 69.04px;
       height: 44.21px;
+      color: $fontColor;
       background-color: $indexBackground;
       border-radius: 100px;
-      color: $fontColor;
 
       &--indexNumber {
         font: normal 400 24px/28.13px $mainFont;
@@ -51,7 +51,7 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
-      @include desktop {
+      @media (min-width: 1024px) {
         transition: all 0.5s ease;
         &:hover {
           transform: scale(1.25, 1.25);
@@ -61,19 +61,21 @@
   }
 
   &__authorName {
-    @include desktop {
+    @media (min-width: 1024px) {
       display: none;
     }
   }
   &__hoverAuthorContainer {
-    @include desktop {
+    @media (min-width: 1024px) {
       position: absolute;
       z-index: 1;
       display: flex;
-      @include center-items;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 40px;
       background-color: rgba(0, 0, 0, 0.561);
+      
     }
     &--author {
       position: relative;
@@ -81,6 +83,7 @@
       color: $fontColor;
       text-transform: uppercase;
       letter-spacing: 2px;
+      
     }
   }
 }
