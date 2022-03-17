@@ -6,16 +6,24 @@ $mainFont: $robotoFont;
 $white: #ffffff;
 $lightGray1: #e5e5e5;
 $lightGray2: #EEEEEE;
+$midGray: #AAAAAA;
 $grey: #637878;
 $darkGrey: rgba(17, 17, 17, 0.8);
 $black: black;
 $red: rgb(224, 86, 86);
 $lightBlue: rgb(171, 208, 233);
-$aqua: aqua;
+$aqua: #00FFDE;
 $darkBlue: rgb(57, 57, 87);
 
 // Main page colors
-$headerColor: $grey;
+$headerColor: $black;
+
+$heroSectionColor: $black;
+$heroFontColor: $lightGray1;
+$heroTitleColor: $white;
+$heroStartBtnColor: $aqua;
+$heroFontStartBtnColor: $aqua;
+
 $fontColor: $white;
 $backgroundColor: $lightGray1;
 $borderColor: $lightGray2;

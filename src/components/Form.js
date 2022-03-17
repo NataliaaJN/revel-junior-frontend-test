@@ -6,8 +6,8 @@ const Form = ({ authorFilter, handleFilter }) => {
     handleFilter(ev.target.value);
   };
   return (
-    <form >
-      <input
+    <form className="form">
+      <input className="form__searchInput"
       name="searchInput"
         type="search"
         placeholder="Search by author"

@@ -39,6 +39,8 @@
 
 
 .header {
+  position: fixed;
+  z-index: 3;
   display: flex;
   @include center-items;
   height: 64px;

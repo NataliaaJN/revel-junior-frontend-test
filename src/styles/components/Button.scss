@@ -1,0 +1,16 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.loadMoreBtn {
+    margin: auto;
+  width: 366px;
+  height: 48px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: 1px solid #111111;
+  background-color: $aqua;
+  @include desktop {
+    width: 300px;
+    height: 56px;
+  }
+}

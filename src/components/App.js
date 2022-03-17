@@ -14,6 +14,8 @@ import Button from "./Button";
 
 // Styles
 import "../styles/App.scss";
+import HeroSection from "./HeroSection";
+import RandomImagesSection from "./RandomImagesSection";
 
 const App = () => {
   //    STATES     //
@@ -69,6 +71,8 @@ const App = () => {
               <main className="main">
                 <Loader isLoading={isLoading} />
                 {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
+                <HeroSection />
+                <RandomImagesSection />
                 <Form authorFilter={authorFilter} handleFilter={handleFilter} />
                 <PhotosList photos={photos} filteredPhotos={filteredPhotos} />
                  

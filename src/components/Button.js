@@ -1,8 +1,8 @@
 import { PropTypes } from "prop-types";
-// import "../styles/components/Photo.scss";
+import "../styles/components/Button.scss";
 
 const Button = ({ showMorePhotos }) => {
-  return <button onClick={showMorePhotos}>Load more</button>;
+  return <button className="loadMoreBtn" onClick={showMorePhotos}>Load more</button>;
 };
 
 Button.propTypes = {

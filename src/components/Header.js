@@ -17,7 +17,7 @@ const Header = () => {
           isHeaderScrolled() ? "main-header--scrolled__title " : "header__title"
         }
       >
-        Cool pics
+        Revel pics
       </h1>
     </header>
   );
