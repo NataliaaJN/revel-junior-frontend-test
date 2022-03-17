@@ -1,13 +1,19 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+// Services
 import getApiData from "../services/api";
-import PhotosList from "./PhotosList";
-import "../styles/App.scss";
+
+// Components
 import Header from "./Header";
 import Form from "./Form";
+import PhotosList from "./PhotosList";
 import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage";
 import PageNotFound from "./PageNotFound";
+import Button from "./Button";
+
+// Styles
+import "../styles/App.scss";
 
 const App = () => {
   //    STATES     //
@@ -65,7 +71,8 @@ const App = () => {
                 {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
                 <Form authorFilter={authorFilter} handleFilter={handleFilter} />
                 <PhotosList photos={photos} filteredPhotos={filteredPhotos} />
-                <button onClick={showMorePhotos}>Load more</button>
+                 
+                <Button showMorePhotos={showMorePhotos} />
               </main>
             </>
           }
