@@ -12,6 +12,10 @@ const HeroSection = () => {
         </p>
         <button className="heroSection__hero--startBtn">Start here</button>
       </article>
+      <div className="heroSection__heroImagesContainer">
+        <div className="heroSection__heroImagesContainer--rectangle rectangle1"><img /></div>
+        <div className="heroSection__heroImagesContainer--rectangle rectangle2"></div>
+      </div>
     </section>
   );
 };

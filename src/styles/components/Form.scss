@@ -2,18 +2,31 @@
 @import "../core/mixins";
 
 .form {
-    @include desktop{
-        padding: 0 127px;
+  &__inputWrapper {
+    position: relative;
+    width: 366px;
+    height: 48px;
+    margin: 24px 0 36px;
+    @include desktop {
+      width: 400px;
+      height: 54px;
     }
-  &__searchInput {
-      width: 366px;
-      height: 48px;
+    &--searchInput {
+      width: 100%;
       background-color: $white;
       border-radius: 8px;
       border: 1px solid $midGray;
-      @include desktop{
-        width: 400px;
-        height: 54px;
+      padding: 15px 0 15px 22px;
+      ::placeholder {
+        padding: 15px 0 15px 22px;
       }
+      
+    }
+    &--searchIcon {
+      position: absolute;
+      z-index: 3;
+      top: 15px;
+      right: 22px;
+    }
   }
 }

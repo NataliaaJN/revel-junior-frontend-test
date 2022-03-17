@@ -4,7 +4,7 @@
 
 .main-header--scrolled {
   position: fixed;
-  z-index: 3;
+  z-index: 999;
   display: flex;
   @include center-items;
   width: 100%;
@@ -37,17 +37,17 @@
   }
 }
 
-
 .header {
   position: fixed;
-  z-index: 3;
+  z-index: 999;
   display: flex;
-  @include center-items;
   height: 64px;
+  width: 100%;
+  @include center-items;
   background-color: $headerColor;
   color: $fontColor;
-  -webkit-animation: toOriginalHeaderSizeMobil 0.6s ease;
-  animation: toOriginalHeaderSizeMobil 0.6s ease;
+  -webkit-animation: toOriginalHeaderSizeMobile 0.6s ease;
+  animation: toOriginalHeaderSizeMobile 0.6s ease;
 
   @include desktop {
     justify-content: flex-start;
@@ -58,6 +58,8 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 4;
     font: normal 400 32px/38px $mainFont;
     word-spacing: -10px;
     text-transform: capitalize;

@@ -72,11 +72,16 @@ const App = () => {
                 <Loader isLoading={isLoading} />
                 {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
                 <HeroSection />
-                <RandomImagesSection />
-                <Form authorFilter={authorFilter} handleFilter={handleFilter} />
-                <PhotosList photos={photos} filteredPhotos={filteredPhotos} />
+                <RandomImagesSection
+                  authorFilter={authorFilter}
+                  handleFilter={handleFilter}
+                  filteredPhotos={filteredPhotos}
+                  showMorePhotos={showMorePhotos}
+                />
+                {/* <Form authorFilter={authorFilter} handleFilter={handleFilter} /> */}
+                {/* <PhotosList photos={photos} filteredPhotos={filteredPhotos} />
                  
-                <Button showMorePhotos={showMorePhotos} />
+                <Button showMorePhotos={showMorePhotos} /> */}
               </main>
             </>
           }

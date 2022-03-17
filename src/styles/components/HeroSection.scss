@@ -2,21 +2,28 @@
 @import "../core/mixins";
 
 .heroSection {
-  border-radius: 0px 0px 24px 24px;
-  margin-bottom: 38px;
-  background-color: $heroSectionColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  border-radius: 0px 0px 24px 24px;
+  background-color: $heroSectionColor;
+  padding: 106px 32px 16px 32px;
+  margin-bottom: 36px;
+
   @include desktop {
-    margin-bottom: 85px;
-    padding: 0 127px;
+    flex-direction: row;
+    padding: 233px 128px 57.71px 128px;
+    margin-bottom: 36px;
   }
   &__hero {
     display: flex;
     flex-direction: column;
-    margin-top: 106px;
-    @include desktop{
-        margin-top: 233px;
+    @include center-items;
+    @include desktop {
+      align-items: flex-start;
     }
+
     &--title {
       font: normal 400 32px/37.5px $mainFont;
       color: $heroTitleColor;
@@ -36,6 +43,7 @@
       @include desktop {
         font-size: 18px;
         line-height: 18.75px;
+        text-align: left;
       }
     }
     &--startBtn {
@@ -43,11 +51,12 @@
       height: 48px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      background-color: transparent;
       color: $heroFontStartBtnColor;
+      background-color: transparent;
       border-radius: 8px;
       border: 1px solid $heroStartBtnColor;
-      margin: 32px 0;
+      margin: 32px 0 48px;
+      cursor: pointer;
       transition: all 0.6s ease;
 
       &:hover {
@@ -61,6 +70,45 @@
         width: 300px;
         height: 56px;
       }
+    }
+  }
+
+  &__heroImagesContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    @include desktop {
+      left: 130px;
+    }
+    @include desktopMax {
+      left: 289px;
+      
+     }
+    &--rectangle {
+      width: 255px;
+      height: 255px;
+      background-color: $white;
+      border: 1px solid $aqua;
+     
+      @include desktop {
+        width: 420.59px;
+        height: 420.59px;
+      }
+    }
+
+    .rectangle1 {
+      position: relative;
+      z-index: 4;
+      transition: all 0.5s ease-in;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 4px 4px 8px $aqua;
+      }
+    }
+    .rectangle2 {
+      position: absolute;
+      top: -15.5px;
+      left: 17.5px;
     }
   }
 }

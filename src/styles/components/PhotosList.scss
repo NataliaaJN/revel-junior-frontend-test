@@ -1,18 +1,13 @@
 @import "../core/mixins";
 @import "../core/variables";
 
-.main {
-  display: grid;
-  // @include center-items;
-  background-color: rgb(26, 25, 25);
-}
 .photosSection {
   display: grid;
-  // @include center-items;
+  @include center-items;
 
   @include desktop {
-    width: 1211px;
-    margin: 40px 0 55px 0;
+    // width: 1211px;
+    margin-bottom: 55px;
     // padding: 0 127px;
   }
 
@@ -21,6 +16,11 @@
     @include center-items;
     grid-template-columns: 1fr;
     gap: 55.02px 0px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 10px;
+    }
 
     @include desktop {
       grid-template-columns: repeat(3, 1fr);

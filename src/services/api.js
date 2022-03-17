@@ -1,5 +1,4 @@
-const getApiData = async (numberOfPhotos) => {
-  // const URL = `https://picsum.photos/v2/list?page=2&limit=${numberOfPhotos}`;
+const getApiData = async () => {
   const URL = `https://picsum.photos/v2/list`;
 
   // Call to api

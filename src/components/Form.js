@@ -7,13 +7,17 @@ const Form = ({ authorFilter, handleFilter }) => {
   };
   return (
     <form className="form">
-      <input className="form__searchInput"
-      name="searchInput"
-        type="search"
-        placeholder="Search by author"
-        value={authorFilter}
-        onChange={handleSearchInput}
-      />
+      <div className="form__inputWrapper">
+        <input
+          className="form__inputWrapper--searchInput"
+          name="searchInput"
+          type="search"
+          placeholder="Search by author"
+          value={authorFilter}
+          onChange={handleSearchInput}
+        />
+        <i className="form__inputWrapper--searchIcon fa-solid fa-magnifying-glass"></i>
+      </div>
     </form>
   );
 };

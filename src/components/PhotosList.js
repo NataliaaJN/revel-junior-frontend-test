@@ -16,7 +16,7 @@ const PhotosList = ({ filteredPhotos }) => {
 };
 
 PhotosList.propTypes ={
-  photos: PropTypes.array.isRequired,
+  filteredPhotos: PropTypes.array.isRequired,
 }
 
 export default PhotosList;

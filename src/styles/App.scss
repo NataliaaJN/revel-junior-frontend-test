@@ -4,3 +4,10 @@
 .App{
     height: 100vh;
 }
+
+.main {
+    display: grid;
+    // @include center-items;
+    background-color: $lightBrown;
+    background-attachment: fixed;
+  }

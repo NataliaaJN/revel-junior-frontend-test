@@ -16,9 +16,22 @@
 
   &__photoContainer {
     position: relative;
-    width: 366px;
-    height: 281.98px;
+    width: 360px;
+    height: 275px;
     border: 1px solid $lightGray2;
+    @include smallDevices {
+      width: 250px;
+      height: 225px;
+    }
+
+    @include mobile {
+      width: 366px;
+      height: 281.98px;
+      transition: all 0.5s ease;
+      &:hover {
+        transform: translate(-5px);
+      }
+    }
 
     @include desktop {
       width: 384px;
@@ -51,7 +64,7 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
-      @media (min-width: 1024px) {
+      @include desktop {
         transition: all 0.5s ease;
         &:hover {
           transform: scale(1.25, 1.25);
@@ -61,12 +74,18 @@
   }
 
   &__authorName {
-    @media (min-width: 1024px) {
+    width: 100%;
+    font: normal 400 24px/28.13px $mainFont;
+    text-align: center;
+    background-color: $black;
+    color: $fontColor;
+    padding: 12px 0;
+    @include desktop {
       display: none;
     }
   }
   &__hoverAuthorContainer {
-    @media (min-width: 1024px) {
+    @include desktop {
       position: absolute;
       z-index: 1;
       display: flex;
@@ -75,7 +94,6 @@
       width: 100%;
       height: 40px;
       background-color: rgba(0, 0, 0, 0.561);
-      
     }
     &--author {
       position: relative;
@@ -83,7 +101,6 @@
       color: $fontColor;
       text-transform: uppercase;
       letter-spacing: 2px;
-      
     }
   }
 }

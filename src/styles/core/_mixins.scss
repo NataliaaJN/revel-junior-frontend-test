@@ -1,15 +1,40 @@
-// @mixin tablet {
-//     @media (min-width: 768px) {
-//       @content;
-//     }
-//   }
-  @mixin desktop {
-    @media (min-width: 1200px) {
-      @content;
-    }
+// Small devices
+@mixin smallDevices {
+  @media (max-width: 300px) {
+    @content;
   }
+}
 
-  @mixin center-items {
-    justify-content: center;
-    align-items: center;
+// Mobile
+@mixin mobile {
+  @media (min-width: 390px) {
+    @content;
   }
+}
+
+// Tablet measures
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Desktop measures
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Desktop max measures
+@mixin desktopMax {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+// Display items in center
+@mixin center-items {
+  justify-content: center;
+  align-items: center;
+}
