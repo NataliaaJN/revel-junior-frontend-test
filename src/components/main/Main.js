@@ -1,14 +1,12 @@
 import PropTypes from "prop-types";
-import ErrorMessage from "../handleErrors/ErrorMessage";
 import Loader from "../loader/Loader";
 import HeroSection from "./HeroSection";
 import RandomImagesSection from "./RandomImagesSection";
 
-const Main = ({errorMessage, isLoading, authorFilter, handleFilter, filteredPhotos, showMorePhotos,}) => {
+const Main = ({ isLoading, authorFilter, handleFilter, filteredPhotos, showMorePhotos,}) => {
   return (
     <main className="main">
       <Loader isLoading={isLoading} />
-      {/* {errorMessage && <ErrorMessage errorMessage={errorMessage} />} */}
       <HeroSection />
       <RandomImagesSection
         authorFilter={authorFilter}
@@ -21,9 +19,11 @@ const Main = ({errorMessage, isLoading, authorFilter, handleFilter, filteredPhot
 };
 
 Main.propTypes = {
-  errorMessage: PropTypes.string,
   isLoading: PropTypes.bool.isRequired,
-  photos: PropTypes.array.isRequired,
+  authorFilter: PropTypes.string,
+  handleFilter: PropTypes.func.isRequired,
+  filteredPhotos: PropTypes.array.isRequired,
+  showMorePhotos: PropTypes.func.isRequired,
 };
 
 export default Main;

@@ -3,16 +3,18 @@ import "../../styles/components/handleErrors/ErrorMessage.scss";
 
 const ErrorMessage = ({ errorMessage }) => {
   return (
-    <>
-      <h2 className="errorTitle">Something went wrong, we couldn't load the pictures</h2>
-      <div className="errorMessageContainer">
-        <i className="fa-solid fa-triangle-exclamation errorMessageContainer__exclamation"></i>
-        <p className="errorMessageContainer__message">
+    <div className="errorMessagePage">
+      <h2 className="errorMessagePage__errorTitle">
+        Something went wrong, we couldn't load the pictures
+      </h2>
+      <div className="errorMessagePage__errorMessageContainer">
+        <i className="fa-solid fa-triangle-exclamation errorMessagePage__errorMessageContainer--exclamation"></i>
+        <p className="errorMessagePage__errorMessageContainer--message">
           {errorMessage}
-          <i className="fa-solid fa-face-frown errorMessageContainer__message--icon"></i>
+          <i className="fa-solid fa-face-frown errorMessagePage__errorMessageContainer--message--icon"></i>
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
@@ -21,4 +23,3 @@ ErrorMessage.propTypes = {
 };
 
 export default ErrorMessage;
-
