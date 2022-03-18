@@ -23,7 +23,7 @@ const Form = ({ authorFilter, handleFilter }) => {
 };
 
 Form.propTypes = {
-  authorFilter: PropTypes.string.isRequired,
+  authorFilter: PropTypes.string,
   handleFilter: PropTypes.func.isRequired,
 };
 

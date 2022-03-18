@@ -16,7 +16,7 @@ const RandomImagesSection = ({ authorFilter, handleFilter, filteredPhotos, showM
 };
 
 RandomImagesSection.propTypes = {
-  authorFilter: PropTypes.string.isRequired,
+  authorFilter: PropTypes.string,
   handleFilter: PropTypes.func.isRequired,
   filteredPhotos: PropTypes.array.isRequired,
   showMorePhotos: PropTypes.func.isRequired,

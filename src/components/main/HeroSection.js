@@ -1,6 +1,4 @@
-import PropTypes from "prop-types";
 import "../../styles/components/main/HeroSection.scss";
-import DogPicture from "../../images/heroPic.jpg";
 
 const HeroSection = () => {
   return (
@@ -14,16 +12,13 @@ const HeroSection = () => {
         <button className="heroSection__hero--startBtn">Start here</button>
       </article>
       <div className="heroSection__heroImagesContainer">
-        <div className="heroSection__heroImagesContainer--rectangle rectangle1"></div>
+        <div className="heroSection__heroImagesContainer--rectangle rectangle1">
+          <div className="heroSection__heroImagesContainer--rectangle--imageContainer"></div>
+        </div>
         <div className="heroSection__heroImagesContainer--rectangle rectangle2"></div>
       </div>
     </section>
   );
-};
-
-HeroSection.propTypes = {
-  authorFilter: PropTypes.string.isRequired,
-  handleFilter: PropTypes.func.isRequired,
 };
 
 export default HeroSection;

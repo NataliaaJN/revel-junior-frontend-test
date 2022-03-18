@@ -16,15 +16,3 @@ const getApiData = async () => {
 };
 
 export default getApiData;
-
-
-// const [response, apiData, cleanedApiData] = await Promise.all([
-//   fetch(URL),
-//   response.json(),
-//   apiData.map((eachApiData) => {
-//     return {
-//       id: eachApiData.id,
-//       photo: eachApiData.download_url,
-//     };
-//   }),
-// ]);

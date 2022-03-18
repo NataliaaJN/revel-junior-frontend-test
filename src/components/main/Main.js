@@ -8,7 +8,7 @@ const Main = ({errorMessage, isLoading, authorFilter, handleFilter, filteredPhot
   return (
     <main className="main">
       <Loader isLoading={isLoading} />
-      {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
+      {/* {errorMessage && <ErrorMessage errorMessage={errorMessage} />} */}
       <HeroSection />
       <RandomImagesSection
         authorFilter={authorFilter}

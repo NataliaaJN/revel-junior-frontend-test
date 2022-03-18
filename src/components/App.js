@@ -6,7 +6,9 @@ import getApiData from "../services/api";
 // Components
 import Header from "./header/Header";
 import Main from "./main/Main";
+import ErrorMessage from "./handleErrors/ErrorMessage";
 import PageNotFound from "./handleErrors/PageNotFound";
+import ErrorBoundary from "./handleErrors/ErrorBoundary";
 
 // Styles
 import "../styles/App.scss";
@@ -19,6 +21,7 @@ const App = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [hasError, setHasError] = useState(false);
 
   //    EFFECTS     //
   // Take api data
@@ -29,7 +32,10 @@ const App = () => {
         setPhotos(data);
         setIsLoading(false);
       })
-      .catch((error) => setErrorMessage(error.message));
+      .catch((error) => {
+        setErrorMessage(error.message);
+        setHasError(true);
+      });
   }, []);
 
   //    FUNCTIONS    //
@@ -60,28 +66,20 @@ const App = () => {
         <Route
           path="/"
           element={
-            <>
+            <ErrorBoundary>
               <Header />
-              <Main
-                isLoading={isLoading}
-                errorMessage={errorMessage}
-                authorFilter={authorFilter}
-                handleFilter={handleFilter}
-                filteredPhotos={filteredPhotos}
-                showMorePhotos={showMorePhotos}
-              />
-              {/* <main className="main">
-                <Loader isLoading={isLoading} />
-                {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
-                <HeroSection />
-                <RandomImagesSection
+              { hasError ? <ErrorMessage errorMessage={errorMessage} /> : (
+                <Main
+                  isLoading={isLoading}
+                  errorMessage={errorMessage}
                   authorFilter={authorFilter}
                   handleFilter={handleFilter}
                   filteredPhotos={filteredPhotos}
                   showMorePhotos={showMorePhotos}
                 />
-              </main> */}
-            </>
+
+              )}
+            </ErrorBoundary>
           }
         />
 

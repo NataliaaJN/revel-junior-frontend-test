@@ -13,7 +13,8 @@
 
   @include desktop {
     flex-direction: row;
-    padding: 233px 128px 57.71px 128px;
+     padding: 233px 128px 57.71px 128px;
+    justify-content: space-between;
     margin-bottom: 36px;
   }
   &__hero {
@@ -77,27 +78,29 @@
     position: relative;
     display: flex;
     justify-content: center;
-    @include desktop {
-      left: 130px;
-    }
-    @include desktopMax {
-      left: 289px;
-      
-     }
+    
     &--rectangle {
+      display: flex;
+      @include center-items;
       width: 255px;
       height: 255px;
       background-color: $white;
       border: 1px solid $aqua;
-     
+
       @include desktop {
         width: 420.59px;
         height: 420.59px;
       }
 
-      &--pic{
-        width: 100%;
-        object-fit: contain;
+      &--imageContainer {
+        width: 191px;
+        height: 191px;
+        background: url("../../../images/heroPic.jpg") center center no-repeat;
+        background-size: cover;
+        @include desktop {
+          width: 315.44px;
+          height: 315.44px;
+        }
       }
     }
 
@@ -105,8 +108,8 @@
       position: relative;
       z-index: 4;
       transition: all 0.5s ease-in;
-      background: $white url(../../images/heroPic.jpg) center center no-repeat;
-      object-fit: contain;
+      background-color: $white;
+
       &:hover {
         transform: translateY(-5px);
         box-shadow: 4px 4px 8px $aqua;

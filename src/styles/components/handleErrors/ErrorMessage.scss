@@ -1,9 +1,29 @@
 @import "../../core/variables";
 @import "../../core/mixins";
 
+.errorTitle {
+  position: fixed;
+  top: 100px;
+  text-align: center;
+  font: normal 400 24px/38px $mainFont;
+  @include tablet {
+    top: 150px;
+    left: 15vw;
+  }
+  @include desktop {
+    top: 180px;
+    left: 20vw;
+    font-size: 32px;
+  }
+  @include desktopMax {
+    left: 25%;
+    font-size: 32px;
+  }
+}
+
 .errorMessageContainer {
   position: fixed;
-  top: 20%;
+  top: 40%;
   left: 10%;
   display: flex;
   @include center-items;
@@ -14,7 +34,7 @@
   border: 5px solid $errorMessageBorderColor;
   outline: 11px solid $errorMessagebkColor;
   @include desktop {
-    top: 20%;
+    top: 45%;
     left: 30vw;
     width: 40vw;
     height: 20vh;
