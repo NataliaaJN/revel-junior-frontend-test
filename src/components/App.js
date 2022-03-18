@@ -4,18 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import getApiData from "../services/api";
 
 // Components
-import Header from "./Header";
-import Form from "./Form";
-import PhotosList from "./PhotosList";
-import Loader from "./Loader";
-import ErrorMessage from "./ErrorMessage";
-import PageNotFound from "./PageNotFound";
-import Button from "./Button";
+import Header from "./header/Header";
+import Main from "./main/Main";
+import PageNotFound from "./handleErrors/PageNotFound";
 
 // Styles
 import "../styles/App.scss";
-import HeroSection from "./HeroSection";
-import RandomImagesSection from "./RandomImagesSection";
 
 const App = () => {
   //    STATES     //
@@ -68,7 +62,15 @@ const App = () => {
           element={
             <>
               <Header />
-              <main className="main">
+              <Main
+                isLoading={isLoading}
+                errorMessage={errorMessage}
+                authorFilter={authorFilter}
+                handleFilter={handleFilter}
+                filteredPhotos={filteredPhotos}
+                showMorePhotos={showMorePhotos}
+              />
+              {/* <main className="main">
                 <Loader isLoading={isLoading} />
                 {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
                 <HeroSection />
@@ -78,11 +80,7 @@ const App = () => {
                   filteredPhotos={filteredPhotos}
                   showMorePhotos={showMorePhotos}
                 />
-                {/* <Form authorFilter={authorFilter} handleFilter={handleFilter} /> */}
-                {/* <PhotosList photos={photos} filteredPhotos={filteredPhotos} />
-                 
-                <Button showMorePhotos={showMorePhotos} /> */}
-              </main>
+              </main> */}
             </>
           }
         />

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "../styles/components/Form.scss";
+import "../../styles/components/main/Form.scss";
 
 const Form = ({ authorFilter, handleFilter }) => {
   const handleSearchInput = (ev) => {

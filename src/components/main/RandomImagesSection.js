@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import "../styles/components/RandomImagesSection.scss";
 import Form from "./Form";
 import PhotosList from "./PhotosList";
 import Button from "./Button";
+import "../../styles/components/main/RandomImagesSection.scss";
 
 const RandomImagesSection = ({ authorFilter, handleFilter, filteredPhotos, showMorePhotos }) => {
   return (

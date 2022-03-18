@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "../styles/components/PageNotFound.scss";
-import CatGif from "../images/computer-cat.gif";
+import "../../styles/components/handleErrors/PageNotFound.scss";
+import CatGif from "../../images/computer-cat.gif";
 
 const PageNotFound = () => {
   return (

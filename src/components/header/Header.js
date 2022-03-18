@@ -1,5 +1,5 @@
-import useScroll from "../hooks/useScroll";
-import "../styles/components/Header.scss";
+import useScroll from "../../hooks/useScroll";
+import "../../styles/components/header/Header.scss";
 
 const Header = () => {
   const scrollInfo = useScroll();

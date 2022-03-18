@@ -1,14 +1,12 @@
-@import "../core/mixins";
-@import "../core/variables";
+@import "../../core/mixins";
+@import "../../core/variables";
 
 .photosSection {
   display: grid;
   @include center-items;
 
   @include desktop {
-    // width: 1211px;
     margin-bottom: 55px;
-    // padding: 0 127px;
   }
 
   &__photosListContainer {

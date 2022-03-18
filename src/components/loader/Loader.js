@@ -1,4 +1,6 @@
-import "../styles/components/Loader.scss";
+import PropTypes from "prop-types";
+import "../../styles/components/loader/Loader.scss";
+
 const Loader = ({isLoading}) => {
   return isLoading && (
     <div className="loader">
@@ -59,5 +61,9 @@ const Loader = ({isLoading}) => {
     </div>
   );
 };
+
+Loader.propTypes ={
+  isLoading: PropTypes.bool.isRequired,
+}
 
 export default Loader;

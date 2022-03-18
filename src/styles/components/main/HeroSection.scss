@@ -1,5 +1,5 @@
-@import "../core/variables";
-@import "../core/mixins";
+@import "../../core/variables";
+@import "../../core/mixins";
 
 .heroSection {
   display: flex;
@@ -8,7 +8,7 @@
   width: 100%;
   border-radius: 0px 0px 24px 24px;
   background-color: $heroSectionColor;
-  padding: 106px 32px 16px 32px;
+  padding: 106px 0 16px 0;
   margin-bottom: 36px;
 
   @include desktop {
@@ -94,12 +94,19 @@
         width: 420.59px;
         height: 420.59px;
       }
+
+      &--pic{
+        width: 100%;
+        object-fit: contain;
+      }
     }
 
     .rectangle1 {
       position: relative;
       z-index: 4;
       transition: all 0.5s ease-in;
+      background: $white url(../../images/heroPic.jpg) center center no-repeat;
+      object-fit: contain;
       &:hover {
         transform: translateY(-5px);
         box-shadow: 4px 4px 8px $aqua;

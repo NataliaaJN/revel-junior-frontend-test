@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "../styles/components/ErrorMessage.scss";
+import "../../styles/components/handleErrors/ErrorMessage.scss";
 
 const ErrorMessage = ({ errorMessage }) => {
   return (

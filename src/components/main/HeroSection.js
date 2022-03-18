@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import "../styles/components/HeroSection.scss";
+import "../../styles/components/main/HeroSection.scss";
+import DogPicture from "../../images/heroPic.jpg";
 
 const HeroSection = () => {
   return (
@@ -13,7 +14,7 @@ const HeroSection = () => {
         <button className="heroSection__hero--startBtn">Start here</button>
       </article>
       <div className="heroSection__heroImagesContainer">
-        <div className="heroSection__heroImagesContainer--rectangle rectangle1"><img /></div>
+        <div className="heroSection__heroImagesContainer--rectangle rectangle1"></div>
         <div className="heroSection__heroImagesContainer--rectangle rectangle2"></div>
       </div>
     </section>
