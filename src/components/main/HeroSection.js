@@ -6,7 +6,7 @@ const HeroSection = () => {
       <article className="heroSection__hero">
         <h2 className="heroSection__hero--title">Are you bored?</h2>
         <p className="heroSection__hero--description">
-          CoolPics helps you to spend hours of your day scrolling down and
+          RevelPics helps you to spend hours of your day scrolling down and
           sharing a big list of random images.
         </p>
         <button className="heroSection__hero--startBtn">Start here</button>
