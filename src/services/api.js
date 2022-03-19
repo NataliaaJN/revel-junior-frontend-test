@@ -1,5 +1,5 @@
 const getApiData = async () => {
-  const URL = `https://picsu.photos/v2/list`;
+  const URL = `https://picsum.photos/v2/list`;
 
   // Call to api
   const response = await fetch(URL);
