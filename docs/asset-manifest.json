@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/revel-test/static/css/main.394170fe.css",
-    "main.js": "/revel-test/static/js/main.3a4efcff.js",
-    "static/media/heroPic.jpg": "/revel-test/static/media/heroPic.33700414cac78cff843d.jpg",
-    "static/media/computer-cat.gif": "/revel-test/static/media/computer-cat.ec0e0633341307e74f0e.gif",
-    "index.html": "/revel-test/index.html",
-    "main.394170fe.css.map": "/revel-test/static/css/main.394170fe.css.map",
-    "main.3a4efcff.js.map": "/revel-test/static/js/main.3a4efcff.js.map"
+    "main.css": "/revel-junior-frontend-test/static/css/main.69434432.css",
+    "main.js": "/revel-junior-frontend-test/static/js/main.f91b4990.js",
+    "static/media/heroPic.jpg": "/revel-junior-frontend-test/static/media/heroPic.33700414cac78cff843d.jpg",
+    "static/media/computer-cat.gif": "/revel-junior-frontend-test/static/media/computer-cat.ec0e0633341307e74f0e.gif",
+    "index.html": "/revel-junior-frontend-test/index.html",
+    "main.69434432.css.map": "/revel-junior-frontend-test/static/css/main.69434432.css.map",
+    "main.f91b4990.js.map": "/revel-junior-frontend-test/static/js/main.f91b4990.js.map"
   },
   "entrypoints": [
-    "static/css/main.394170fe.css",
-    "static/js/main.3a4efcff.js"
+    "static/css/main.69434432.css",
+    "static/js/main.f91b4990.js"
   ]
 }
