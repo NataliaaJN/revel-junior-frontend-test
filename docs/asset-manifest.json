@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.5fb06ddb.css",
-    "main.js": "./static/js/main.bf10eb62.js",
-    "static/media/heroPic.jpg": "./static/media/heroPic.33700414cac78cff843d.jpg",
-    "static/media/computer-cat.gif": "./static/media/computer-cat.ec0e0633341307e74f0e.gif",
-    "index.html": "./index.html",
-    "main.5fb06ddb.css.map": "./static/css/main.5fb06ddb.css.map",
-    "main.bf10eb62.js.map": "./static/js/main.bf10eb62.js.map"
+    "main.css": "/revel-test/static/css/main.394170fe.css",
+    "main.js": "/revel-test/static/js/main.3a4efcff.js",
+    "static/media/heroPic.jpg": "/revel-test/static/media/heroPic.33700414cac78cff843d.jpg",
+    "static/media/computer-cat.gif": "/revel-test/static/media/computer-cat.ec0e0633341307e74f0e.gif",
+    "index.html": "/revel-test/index.html",
+    "main.394170fe.css.map": "/revel-test/static/css/main.394170fe.css.map",
+    "main.3a4efcff.js.map": "/revel-test/static/js/main.3a4efcff.js.map"
   },
   "entrypoints": [
-    "static/css/main.5fb06ddb.css",
-    "static/js/main.bf10eb62.js"
+    "static/css/main.394170fe.css",
+    "static/js/main.3a4efcff.js"
   ]
 }
